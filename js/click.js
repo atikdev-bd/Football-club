@@ -7,13 +7,7 @@ document.getElementById('messi-id').addEventListener('click', function () {
     const li = document.createElement('li')
     li.innerText = messiString;
     orderIist.appendChild(li);
-
-
-
 })
-
-
-
 
 document.getElementById('dimaria-id').addEventListener('click', function () {
     const dimaria = document.getElementById('dimaria');
@@ -67,34 +61,28 @@ document.getElementById('mauro-id').addEventListener('click', function () {
 
 })
 
-// let selectedPlayersQnty = document.getElementById('order-list').childElementCount;
-// let playersQuantity = document.getElementById('order').children.length;
-// console.log(selectedPlayersQnty, playersQuantity);
+////***ADD EVENT LISTENER IN CALULATE BUTTON***\\\\
 
-// const num = 0;
-// const numValue = num + 1;
 document.getElementById('calculate-btn').addEventListener('click', function () {
     let selectedPlayersQnty = document.getElementById('order-list').children.length;
   
     const inputValue = getElementValueById('input-id');
    
     const calculate = selectedPlayersQnty * inputValue
- 
+    if (isNaN(elementId)) {   
+        return;
+    }
     setElementValueById('expenses-amount',calculate);
    
 })
 document.getElementById('calulate-total').addEventListener('click', function(){
     const expenses = getElementTextById('expenses-amount');
-   
     const managerSalary = getElementValueById('manager-id');
-   
-
     const coachSalary = getElementValueById('coach-id');
     
     const totalExpenses = expenses + managerSalary + coachSalary;
-  
+    if (isNaN(elementId)) {   
+        return;
+    }
     setElementValueById('total-cost', totalExpenses);
-    
-
-
 })

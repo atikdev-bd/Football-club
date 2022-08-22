@@ -2,7 +2,10 @@ function getElementValueById(element) {
     const elementId = document.getElementById(element);
     const elementString = elementId.value;
     const elementValue = parseFloat(elementString);
-  
+    if (isNaN(elementId)) {
+        alert('Please give valid input')
+        return
+    }
     return elementValue;
 }
 function getElementTextById(textId) {
