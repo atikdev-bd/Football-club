@@ -84,3 +84,20 @@ document.getElementById('calculate-btn').addEventListener('click', function () {
 
 
 })
+document.getElementById('calulate-total').addEventListener('click', function(){
+    const expenses = document.getElementById('expenses-amount');
+    const expensesString = expenses.innerText;
+    const expensesTotal = parseFloat(expensesString);
+
+    const managerSalary = document.getElementById('manager-id');
+    const managerSalaryString = managerSalary.value;
+    const managerSalaryTotal = parseFloat(managerSalaryString);
+
+    const coachSalary = document.getElementById('coach-id');
+    const coachSalaryString = coachSalary.value;
+    const coachSalaryTotal = parseFloat(coachSalaryString);
+    const totalExpenses = expensesTotal + managerSalaryTotal + coachSalaryTotal;
+    console.log(totalExpenses)
+
+
+})
