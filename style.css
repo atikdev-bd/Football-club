@@ -1,19 +1,43 @@
 .card-title {
-text-align: center;
-color: rgb(237, 203, 117);
-margin-top: 190px;
+    text-align: center;
+    color: rgb(237, 203, 117);
+    margin-top: 190px;
 
 }
-.card-title1{
+
+.card-title1 {
     text-align: center;
     color: burlywood;
 }
 
-.card-body{
-
-text-align: center;
+.card {
+    text-align: center;
 }
 
-.selected{
-text-align: center;
+.calculate {
+
+    text-align: center;
+}
+
+#players {
+    background-color: rgb(95, 95, 80);
+    border-radius: 5px;
+
+}
+
+.selected {
+    text-align: center;
+}
+
+.Total {
+
+    text-align: center;
+}
+
+.footer-title {
+    text-align: center;
+}
+
+.footer-id {
+    margin-top: 100px;
 }
