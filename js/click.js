@@ -75,29 +75,26 @@ document.getElementById('mauro-id').addEventListener('click', function () {
 // const numValue = num + 1;
 document.getElementById('calculate-btn').addEventListener('click', function () {
     let selectedPlayersQnty = document.getElementById('order-list').children.length;
-    const input = document.getElementById('input-id');
-    const inputString = input.value;
-    const inputValue = parseFloat(inputString);
+  
+    const inputValue = getElementValueById('input-id');
+   
     const calculate = selectedPlayersQnty * inputValue
-    const expenses = document.getElementById('expenses-amount');
-    expenses.innerText = calculate
-
-
+ 
+    setElementValueById('expenses-amount',calculate);
+   
 })
 document.getElementById('calulate-total').addEventListener('click', function(){
-    const expenses = document.getElementById('expenses-amount');
-    const expensesString = expenses.innerText;
-    const expensesTotal = parseFloat(expensesString);
+    const expenses = getElementTextById('expenses-amount');
+   
+    const managerSalary = getElementValueById('manager-id');
+   
 
-    const managerSalary = document.getElementById('manager-id');
-    const managerSalaryString = managerSalary.value;
-    const managerSalaryTotal = parseFloat(managerSalaryString);
-
-    const coachSalary = document.getElementById('coach-id');
-    const coachSalaryString = coachSalary.value;
-    const coachSalaryTotal = parseFloat(coachSalaryString);
-    const totalExpenses = expensesTotal + managerSalaryTotal + coachSalaryTotal;
-    console.log(totalExpenses)
+    const coachSalary = getElementValueById('coach-id');
+    
+    const totalExpenses = expenses + managerSalary + coachSalary;
+  
+    setElementValueById('total-cost', totalExpenses);
+    
 
 
 })
