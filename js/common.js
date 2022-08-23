@@ -1,8 +1,12 @@
+function disable(x) {
+    x.disabled = true;
+}
+
 function getElementValueById(element) {
     const elementId = document.getElementById(element);
     const elementString = elementId.value;
     const elementValue = parseFloat(elementString);
-    if (isNaN(elementId)) {
+    if (isNaN(elementValue)) {
         alert('Please give valid input')
         return
     }
@@ -17,5 +21,5 @@ function getElementTextById(textId) {
 function setElementValueById(element, newValue) {
     const setElement = document.getElementById(element);
     setElement.innerText = newValue
-    
+
 }
