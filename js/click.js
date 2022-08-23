@@ -25,8 +25,8 @@ document.getElementById('dimaria-id').addEventListener('click', function () {
     const li = document.createElement('li')
     li.innerText = dimariaString;
     orderIist.appendChild(li)
-
 })
+
 document.getElementById('mbappe-id').addEventListener('click', function () {
     const mbappe = document.getElementById('mbappe');
     const mbappeString = mbappe.innerText;
@@ -39,8 +39,8 @@ document.getElementById('mbappe-id').addEventListener('click', function () {
     const li = document.createElement('li')
     li.innerText = mbappeString;
     orderIist.appendChild(li)
-
 })
+
 document.getElementById('neymar-id').addEventListener('click', function () {
     const neymar = document.getElementById('neymar');
     const neymarString = neymar.innerText;
@@ -53,8 +53,8 @@ document.getElementById('neymar-id').addEventListener('click', function () {
     const li = document.createElement('li')
     li.innerText = neymarString;
     orderIist.appendChild(li)
-
 })
+
 document.getElementById('gueye-id').addEventListener('click', function () {
     const gueye = document.getElementById('gueye');
     const gueyeString = gueye.innerText;
@@ -67,7 +67,6 @@ document.getElementById('gueye-id').addEventListener('click', function () {
     const li = document.createElement('li');
     li.innerText = gueyeString;
     orderIist.appendChild(li)
-
 })
 
 document.getElementById('mauro-id').addEventListener('click', function () {
@@ -82,7 +81,6 @@ document.getElementById('mauro-id').addEventListener('click', function () {
     const li = document.createElement('li')
     li.innerText = mauroString;
     orderIist.appendChild(li)
-
 })
 
 ////***ADD EVENT LISTENER IN CALULATE BUTTON***\\\\
@@ -97,8 +95,8 @@ document.getElementById('calculate-btn').addEventListener('click', function () {
         return;
     }
     setElementValueById('expenses-amount',calculate);
-   
 })
+
 document.getElementById('calulate-total').addEventListener('click', function(){
     const expenses = getElementTextById('expenses-amount');
     const managerSalary = getElementValueById('manager-id');

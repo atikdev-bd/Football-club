@@ -21,5 +21,4 @@ function getElementTextById(textId) {
 function setElementValueById(element, newValue) {
     const setElement = document.getElementById(element);
     setElement.innerText = newValue
-
 }
