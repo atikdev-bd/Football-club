@@ -4,9 +4,9 @@ document.getElementById('messi-id').addEventListener('click', function () {
     const messiString = messi.innerText;
 
     const orderIist = document.getElementById('order-list');
-    if(orderIist.children.length >= 5){
-    alert('You cannot take more than five players')
-    return
+    if (orderIist.children.length >= 5) {
+        alert('You cannot take more than five players')
+        return
     }
     const li = document.createElement('li')
     li.innerText = messiString;
@@ -18,10 +18,10 @@ document.getElementById('dimaria-id').addEventListener('click', function () {
     const dimariaString = dimaria.innerText;
 
     const orderIist = document.getElementById('order-list');
-    if(orderIist.children.length >= 5){
+    if (orderIist.children.length >= 5) {
         alert('You cannot take more than five players')
         return
-        }
+    }
     const li = document.createElement('li')
     li.innerText = dimariaString;
     orderIist.appendChild(li)
@@ -32,10 +32,10 @@ document.getElementById('mbappe-id').addEventListener('click', function () {
     const mbappeString = mbappe.innerText;
 
     const orderIist = document.getElementById('order-list');
-    if(orderIist.children.length >= 5){
+    if (orderIist.children.length >= 5) {
         alert('You cannot take more than five players')
         return
-        }
+    }
     const li = document.createElement('li')
     li.innerText = mbappeString;
     orderIist.appendChild(li)
@@ -46,10 +46,10 @@ document.getElementById('neymar-id').addEventListener('click', function () {
     const neymarString = neymar.innerText;
 
     const orderIist = document.getElementById('order-list');
-    if(orderIist.children.length >= 5){
+    if (orderIist.children.length >= 5) {
         alert('You cannot take more than five players')
         return
-        }
+    }
     const li = document.createElement('li')
     li.innerText = neymarString;
     orderIist.appendChild(li)
@@ -60,10 +60,10 @@ document.getElementById('gueye-id').addEventListener('click', function () {
     const gueyeString = gueye.innerText;
 
     const orderIist = document.getElementById('order-list');
-    if(orderIist.children.length >= 5){
+    if (orderIist.children.length >= 5) {
         alert('You cannot take more than five players')
         return
-        }
+    }
     const li = document.createElement('li');
     li.innerText = gueyeString;
     orderIist.appendChild(li)
@@ -74,10 +74,10 @@ document.getElementById('mauro-id').addEventListener('click', function () {
     const mauroString = mauro.innerText;
 
     const orderIist = document.getElementById('order-list');
-    if(orderIist.children.length >= 5){
+    if (orderIist.children.length >= 5) {
         alert('You cannot take more than five players')
         return
-        }
+    }
     const li = document.createElement('li')
     li.innerText = mauroString;
     orderIist.appendChild(li)
@@ -89,21 +89,21 @@ document.getElementById('calculate-btn').addEventListener('click', function () {
     let selectedPlayersQnty = document.getElementById('order-list').children.length;
 
     const inputValue = getElementValueById('input-id');
-   
+
     const calculate = selectedPlayersQnty * inputValue
-    if (isNaN(calculate)) {   
+    if (isNaN(calculate)) {
         return;
     }
-    setElementValueById('expenses-amount',calculate);
+    setElementValueById('expenses-amount', calculate);
 })
 
-document.getElementById('calulate-total').addEventListener('click', function(){
+document.getElementById('calulate-total').addEventListener('click', function () {
     const expenses = getElementTextById('expenses-amount');
     const managerSalary = getElementValueById('manager-id');
     const coachSalary = getElementValueById('coach-id');
-    
+
     const totalExpenses = expenses + managerSalary + coachSalary;
-    if (isNaN(totalExpenses)) {   
+    if (isNaN(totalExpenses)) {
         return;
     }
     setElementValueById('total-cost', totalExpenses);
